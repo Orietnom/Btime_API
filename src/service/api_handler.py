@@ -25,9 +25,12 @@ def get_weather_data():
         """
 
     logger.info("Start the Automation")
+
+    # Getting the date to filter the weather data
+    days_before = os.getenv("DAYS_BEFORE", 0)
     # Build the API URL using the configured base URL and date filter.
     url = os.getenv("URL", "https://apitempo.inmet.gov.br/condicao/capitais/{0}")
-    complete_url = url.format(date_to_filter(int(os.getenv("DAYS_BEFORE", 0))))
+    complete_url = url.format(date_to_filter(int(days_before)))
 
     logger.info(f"Realizing an https get to url {complete_url}")
     # Perform the HTTP GET request to the remote service.

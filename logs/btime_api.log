@@ -57,3 +57,9 @@ Traceback (most recent call last):
           └ <class 'requests.exceptions.HTTPError'>
 
 requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://apitempo.inmet.gov.br/condicao/capitais/2025-08-2822
+2025-08-29 00:19:41 | INFO | src.service.api_handler:get_weather_data | Start the Automation | {}
+2025-08-29 00:19:41 | INFO | src.service.api_handler:get_weather_data | Realizing an https get to url https://apitempo.inmet.gov.br/condicao/capitais/2025-08-28 | {}
+2025-08-29 00:19:41 | SUCCESS | src.service.api_handler:get_weather_data | Request accepted with successful | {}
+2025-08-29 00:19:41 | SUCCESS | src.service.api_handler:get_weather_data | Data got with success | {}
+2025-08-29 00:19:41 | INFO | src.service.csv_handler:csv_creator | Creating a CSV with de weather data | {}
+2025-08-29 00:19:41 | SUCCESS | src.service.csv_handler:csv_creator | CSV created with success | {}
