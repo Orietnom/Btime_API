@@ -1,0 +1,59 @@
+2025-08-29 00:04:18 | INFO | src.service.api_handler:get_weather_data | Start the Automation | {}
+2025-08-29 00:04:18 | INFO | src.service.api_handler:get_weather_data | Realizing an https get to url https://apitempo.inmet.gov.br/condicao/capitais/2025-08-28 | {}
+2025-08-29 00:04:37 | ERROR | src.service.api_handler:get_weather_data | Request not accepted. Error: 500 Server Error: Internal Server Error for url: https://apitempo.inmet.gov.br/condicao/capitais/2025-08-2822 | {}
+2025-08-29 00:04:37 | ERROR | __main__:<module> | Failed running Btime_API | {}
+Traceback (most recent call last):
+
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\plugins\python-ce\helpers\pydev\pydevd.py", line 2195, in <module>
+    main()
+    └ <function main at 0x0000014383B77920>
+
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\plugins\python-ce\helpers\pydev\pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 56180, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': Fal...
+              │        └ <function PyDB.run at 0x0000014383B765C0>
+              └ <__main__.PyDB object at 0x000001438389BB90>
+
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\plugins\python-ce\helpers\pydev\pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │    │     │          │               │            └ 'L:\\ergon\\Projetos pessoais\\Btime_API\\main.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x0000014383B76660>
+           └ <__main__.PyDB object at 0x000001438389BB90>
+
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\plugins\python-ce\helpers\pydev\pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    │             │        └ 'L:\\ergon\\Projetos pessoais\\Btime_API\\main.py'
+    │             └ <function execfile at 0x00000143834BA0C0>
+    └ <module '_pydev_bundle.pydev_imports' from 'C:\\Program Files\\JetBrains\\PyCharm Community Edition 2023.1\\plugins\\python-c...
+
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2023.1\plugins\python-ce\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 │              └ 'L:\\ergon\\Projetos pessoais\\Btime_API\\main.py'
+                 └ 'from src.service.api_handler import get_weather_data\nfrom src.service.csv_handler import csv_creator\nfrom src.shared.logge...
+
+> File "L:\ergon\Projetos pessoais\Btime_API\main.py", line 8, in <module>
+    rows = get_weather_data()
+           └ <function get_weather_data at 0x0000014383C1A2A0>
+
+  File "L:\ergon\Projetos pessoais\Btime_API\src\service\api_handler.py", line 37, in get_weather_data
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x0000014383F05F80>
+    └ <Response [500]>
+
+  File "L:\ergon\Projetos pessoais\Btime_API\venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [500]>
+          │         └ '500 Server Error: Internal Server Error for url: https://apitempo.inmet.gov.br/condicao/capitais/2025-08-2822'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://apitempo.inmet.gov.br/condicao/capitais/2025-08-2822

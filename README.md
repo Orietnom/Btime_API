@@ -9,13 +9,25 @@ Este projeto coleta dados meteorológicos das capitais brasileiras a partir da A
 
 ## Instalação
 
-1. Clone este repositório e acesse a pasta do projeto.
-2. (Opcional) Crie e ative um ambiente virtual.
-3. Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-```
+1. Clone o repositório e entre na pasta do projeto:
+   ```bash
+   git clone <url-do-repositorio>
+   cd Btime_API
+   ```
+2. Crie e ative um ambiente virtual (opcional, porém recomendado):
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux ou macOS
+   .venv\Scripts\activate     # Windows
+   ```
+3. Instale as dependências do projeto:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Instale os navegadores necessários do Playwright:
+   ```bash
+   playwright install
+   ```
 
 ## Configuração
 
@@ -39,7 +51,8 @@ Execute o script principal:
 python main.py
 ```
 
-Um arquivo CSV será gerado na pasta `output` com o nome `inmet_<YYYYMMDD_HHMMSS>.csv`.
+Um arquivo CSV será gerado na pasta `output` com o nome `inmet_<YYYYMMDD_HHMMSS>.csv` e os logs serão armazenados em 
+`logs/`.
 
 ## Observações
 

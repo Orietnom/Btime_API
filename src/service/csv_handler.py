@@ -6,6 +6,8 @@ from datetime import datetime
 
 import csv
 
+from src.shared.logger import logger
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 OUTPUT_DIR = BASE_DIR / "output"
 
@@ -17,6 +19,7 @@ def csv_creator(rows: List[Dict]):
             rows: A list of dictionaries representing rows of weather data.
         """
 
+    logger.info("Creating a CSV with de weather data")
     # Determine column headers from the first dictionary.
     fields = (rows[0].keys())
 
@@ -33,3 +36,5 @@ def csv_creator(rows: List[Dict]):
         w.writeheader()
         # Write the data rows.
         w.writerows(rows)
+
+    logger.success("CSV created with success")
